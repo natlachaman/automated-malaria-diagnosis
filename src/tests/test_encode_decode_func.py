@@ -111,19 +111,14 @@ def test_script(args):
         switcher = {'tf': '', #ssd_net.bboxes_detect(out),
                     'np': ssd_net.bboxes_detect_numpy(out)}
         classes, scores, bboxes = switcher.get(mode, IOError('tf or np'))
-        print('1')
         for i, img in enumerate(inp):
             print(img.shape)
             fig, ax = plt.subplots(1, 1)
-            print('4')
             for cls in range(1, 3):
-                print('5')
                 idx = np.where(classes[i] == cls)[0]
                 sc = scores[i][idx]
                 bb = bboxes[i][idx]
-                print('6')
                 plt_bboxes(img, cls, sc, bb, colors, ax, linewidth=1.5)
-                print('7')
             fig.savefig('./tests/data_gen_flip_{}_{}.jpg'.format(i, j))
             print('2')
 
