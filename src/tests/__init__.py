@@ -1,1 +1,1 @@
-from . import test_encode_decode_func
+from . import test_encode_decode_pipeline
