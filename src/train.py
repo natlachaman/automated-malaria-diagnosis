@@ -446,8 +446,8 @@ if __name__ == '__main__':
 
     #-----Uncomment encapsuled sections below if execution from command line is desired/required-----------
 
+    # ----------------------------------------- pt. 1------------------------------------------------------
     if isinstance(sys.stdin, io.TextIOWrapper):
-        #----------------------------------------- pt. 1------------------------------------------------------
         parser.add_argument('--img_shape', dest='img_shape', nargs='*', type=int)
         parser.add_argument('--num_classes', dest='num_classes', type=int)
         parser.add_argument('--no_annotation_label', dest='no_annotation_label', type=float)
