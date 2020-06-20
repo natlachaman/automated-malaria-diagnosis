@@ -14,7 +14,7 @@ SSDParams = ssd_params_vars()
 
 # Settings
 gt_file       = os.path.join(global_variables.PICKLE_FOLDER, 'gt_train2_fal_wbc_prep.pickle')
-epochs        = 120
+epochs        = 2
 batch_size    = 16
 optimizer     = 'adam'
 learning_rate = 0.001

@@ -357,7 +357,6 @@ def train_function(args):
     :return: None
     """
     print('HERE', isinstance(sys.stdin, io.TextIOWrapper))
-    exit()
 
     with tf.Session() as sess:
 
