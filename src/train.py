@@ -504,7 +504,7 @@ if __name__ == '__main__':
 
     if isinstance(sys.stdin, io.TextIOWrapper):
         args.ssd_params = ssd_params
-        global_variables.IMAGES_PATH = os.path.join(global_variables.DATA_PATH, 'images', args.img_dir)
+        global_variables.IMAGES_PATH = os.path.join(global_variables.DATA_PATH, args.img_dir)
         global_variables.INPUT_SHAPE = tuple(args.img_shape)
         args.gt = os.path.join(global_variables.PICKLE_FOLDER, args.gt)
 

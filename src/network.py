@@ -521,7 +521,8 @@ def ssd_net(inputs,
                                                pooling=True,
                                                include_top=False)
         for layer in feat_layers:
-            net[layer] = vgg16.get_layer(layer).output
+            if vgg16.get_layer(layer):
+                net[layer] = vgg16.get_layer(layer).output
 
         # Add SSD layers
         net['block6'] = Conv2D(1024, (3, 3), padding='same', name='block6')(vgg16.output)
@@ -555,7 +556,8 @@ def ssd_net(inputs,
         del base_model
 
         for layer in feat_layers:
-            net[layer] = vgg16.get_layer(layer).output
+            if vgg16.get_layer(layer):
+                net[layer] = vgg16.get_layer(layer).output
 
         # Add SSD layers
         net['block6'] = Conv2D(1024, (3, 3), padding='same', name='block6')(vgg16.output)

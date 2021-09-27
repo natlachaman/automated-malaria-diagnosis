@@ -21,18 +21,18 @@ def init():
               'true': (1., 0., 0.)}
 
     global HOME_FOLDER
-    HOME_FOLDER = os.path.join('/', 'home-link', 'knaxq01')
+    HOME_FOLDER = os.path.abspath('..')
 
     global DATA_PATH
-    DATA_PATH = os.path.join(HOME_FOLDER, 'data', 'quinn')
+    DATA_PATH = os.path.join(HOME_FOLDER, 'data')
     
     global IMAGES_PATH
-    IMAGES_PATH = os.path.join(DATA_PATH, 'images', 'test')
+    IMAGES_PATH = os.path.join(DATA_PATH, 'preprocess', 'train')
     
     global PICKLE_FOLDER
     PICKLE_FOLDER = os.path.join(DATA_PATH, 'pickle')
     
     global RESULTS_FOLDER
-    RESULTS_FOLDER = os.path.join(HOME_FOLDER, 'Deployment', 'ssd', 'results')
+    RESULTS_FOLDER = os.path.join(HOME_FOLDER, 'results')
 
 
